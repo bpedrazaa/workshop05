@@ -25,8 +25,21 @@ namespace EventTicketingApp
 
         public override void getInfo()
         {
-            Console.WriteLine("{0} that will confront {1} vs {2} at {3}", Type, team01, team02, date);
+            Console.WriteLine("{0} that will confront {1} vs {2} at {3}\n", Type, team01, team02, date);
         }
+
+        List<Ticket> tickets = new List<Ticket>();
+
+        public override List<Ticket> offerTickets()
+        {
+            tickets.Add(new Ticket(40.0, "VIP", "Between 150-200"));
+            tickets.Add(new Ticket(20.0, "Normal", "Between 0-100"));
+
+            return tickets;
+        }
+
+
+
 
     }
 }

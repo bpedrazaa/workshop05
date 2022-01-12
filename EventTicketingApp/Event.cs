@@ -11,6 +11,7 @@ namespace EventTicketingApp
 
         public abstract void getDescription();
         public abstract void getInfo();
+        public abstract List<Ticket> offerTickets();
 
     }
 }

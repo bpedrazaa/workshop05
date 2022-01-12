@@ -23,8 +23,17 @@ namespace EventTicketingApp
         }
 
         public override void getInfo() {
-            Console.WriteLine("{0} with the presence of {1} at {2}", Type, band, date);
+            Console.WriteLine("{0} with the presence of {1} at {2}\n", Type, band, date);
         }
 
+        List<Ticket> tickets = new List<Ticket>();
+        public override List<Ticket> offerTickets()
+        {
+            tickets.Add(new Ticket(80.0, "Ultra VIP", "Between 100-200"));
+            tickets.Add(new Ticket(30.0, "Normal", "Between 0-99"));
+            tickets.Add(new Ticket(100.0, "Golden Pass", "Between 201-215"));
+
+            return tickets;
+        }
     }
 }

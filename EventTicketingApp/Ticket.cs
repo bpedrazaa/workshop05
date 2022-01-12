@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EventTicketingApp
 {
-    class Ticket
+    public class Ticket
     {
         private double price;
         private string type;
@@ -17,7 +17,7 @@ namespace EventTicketingApp
         }
 
         public void getTicketInfo(){
-            Console.Write("The ticket of type {0} costs {1} Bolivians, the place of your chair is {2}", type, price, place);
+            Console.Write("The ticket of type {0} costs {1} Bolivians, the place of your chair is {2}\n", type, price, place);
         }
     }
 }
